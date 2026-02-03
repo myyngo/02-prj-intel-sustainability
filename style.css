@@ -1,3 +1,53 @@
+/* Tinos font classes */
+.tinos-regular {
+	font-family: "Tinos", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.tinos-bold {
+	font-family: "Tinos", serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.tinos-regular-italic {
+	font-family: "Tinos", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+.tinos-bold-italic {
+	font-family: "Tinos", serif;
+	font-weight: 700;
+	font-style: italic;
+}
+/* Scope One font class */
+.scope-one-regular {
+	font-family: "Scope One", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+/* DM Serif Text font classes */
+.dm-serif-text-regular {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.dm-serif-text-regular-italic {
+	font-family: "DM Serif Text", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+/* Use Bitcount Single font for the main headline */
+.bitcount-single-headline {
+	font-family: "Bitcount Single", system-ui;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"CRSV" 0.5,
+		"ELSH" 0,
+		"ELXP" 0;
+}
 
 body {
 	font-family: Arial, sans-serif;
@@ -11,7 +61,7 @@ body {
 	background: linear-gradient(135deg, #0071c5 0%, #00aaff 100%);
 	color: #fff;
 	text-align: center;
-	padding: 48px 20px 32px 20px;
+	padding: 50px 20px 35px 20px;
 	position: relative;
 }
 .intel-logo {
@@ -95,10 +145,41 @@ body {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	padding: 24px 16px 16px 16px;
+}
+
+.flip-card-front {
+	padding: 0;
+	overflow: hidden;
+}
+
+/* Make the stock photo fill the card front */
+.card-stock-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 16px 16px 0 0;
+	flex-shrink: 0;
+	display: block;
+}
+
+/* Place milestone text over the image */
+.milestone-year, .milestone-title {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.milestone-year {
+	top: 18px;
+	color: #fff;
+}
+.milestone-title {
+	top: 54px;
+	color: #fff;
 }
 .flip-card-front {
-	background: #fff;
+	background: #e3f2fd; /* light blue, lighter than the blue/teal */
 	box-shadow: 0 2px 8px rgba(0,113,197,0.08);
 	z-index: 2;
 	transition: box-shadow 0.3s;
